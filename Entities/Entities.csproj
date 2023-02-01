@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>83951f88-be4f-4fd7-9cb2-c11cab364373</ProjectGuid>
+    <ProjectGuid>{83951F88-BE4F-4FD7-9CB2-C11CAB364373}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Entities</RootNamespace>
@@ -31,24 +31,32 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\ICreated.cs" />
+    <Compile Include="Abstract\IDisplayEntity.cs" />
+    <Compile Include="Abstract\IDto.cs" />
+    <Compile Include="Abstract\IEntity.cs" />
+    <Compile Include="Abstract\IUpdatedEntity.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="Concrete\BaseEntities\AuditableEntity.cs" />
+    <Compile Include="Concrete\BaseEntities\BaseEntity.cs" />
+    <Compile Include="Concrete\User.cs" />
+    <Compile Include="Dtos\UserDtos\UserAddDto.cs" />
+    <Compile Include="Dtos\UserDtos\UserDetailDto.cs" />
+    <Compile Include="Dtos\UserDtos\UserDto.cs" />
+    <Compile Include="Dtos\UserDtos\UserUpdateDto.cs" />
+    <Compile Include="Enums\Genders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
